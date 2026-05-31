@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+.app {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.trainer-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.image-section,
+.form-section,
+#result {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.image-section {
+    text-align: center;
+}
+
+#boardImage {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-section h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 24px;
+}
+
+.result-line {
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f7f7f7;
+}
+
+.result-line.correct {
+    border-left: 6px solid green;
+}
+
+.result-line.wrong {
+    border-left: 6px solid red;
+}
+
+@media (max-width: 900px) {
+    .trainer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #boardImage {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .app {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .image-section,
+    .form-section,
+    #result {
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

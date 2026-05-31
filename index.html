@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIP-Trainer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <h1>PIP-Trainer</h1>
+
+        <section class="trainer-layout">
+
+            <div class="image-section">
+                <img id="boardImage" src="" alt="Backgammon Position">
+            </div>
+
+            <div class="form-section">
+
+                <h2>Deine Antworten</h2>
+
+                <label for="PIP_Weiss">PIP Weiss</label>
+                <input type="number" id="PIP_Weiss">
+
+                <label for="PiP_Schwarz">PIP Schwarz</label>
+                <input type="number" id="PiP_Schwarz">
+
+                <label for="Gewinnprozent_Weiss">Gewinnprozent Weiss</label>
+                <input type="number" step="0.01" id="Gewinnprozent_Weiss">
+
+                <label for="Double">Double?</label>
+                <select id="Double">
+                    <option value="">Bitte wählen</option>
+                    <option value="true">Ja</option>
+                    <option value="false">Nein</option>
+                </select>
+
+                <label for="Take">Take?</label>
+                <select id="Take">
+                    <option value="">Bitte wählen</option>
+                    <option value="true">Ja</option>
+                    <option value="false">Nein</option>
+                </select>
+
+                <div class="button-row">
+                    <button onclick="checkAnswers()">Prüfen</button>
+                    <button onclick="nextPosition()">Nächste Position</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="result"></section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
